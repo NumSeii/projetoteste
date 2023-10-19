@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Play</title>
+	<meta charset="utf-8">
+	<style>
+
+        * {
+	    margin: 0;
+	    padding: 0;
+        }
+
+        body {
+	    font-size: 16px;
+	    font-family: "Treuchet", Helvetica, sans-serif;
+	    background: #ff4d4d; /*rosa-claro*/
+        }
+
+        #navegacao{
+        background: #fff; /*branco*/
+        border-bottom: 1px solid #ffb3b3; /*vermelho*/
+        height: 50px;
+        }
+
+        #area {
+	    width: 720px;
+	    margin: 0 auto;
+        }
+
+        #logo {
+	    float: left;
+        }
+
+        #menu {
+	    font-size: 15px;
+	    float: right;
+	    padding: 10px 0;
+        }
+
+        .rosa {
+	    color: #ff0000; /* #ffb3b3 rosa-menos-claro*/
+        }
+
+        #area-principal {
+        /*background: #fff;*/
+	    width: 720px;
+	    margin: 10px auto 10px auto;
+        }
+
+        #postagem {
+	    background: #fff;
+        height: 500px;
+	    padding: 0px 20px 0px 20px;
+        }
+        
+        a {
+	    color: #ff1a1a;
+	    padding: 5px 10px;
+	    text-decoration: none;
+        }
+
+        a:hover {
+	    color: #fff;
+	    background: #ff1a1a/*#ffcccc*/;
+        }
+
+        a:link {
+	    color: #ffb3b3;
+        }
+
+        a:active {
+	    color: black;
+        }
+
+        #img {
+            width: 680px;
+            height: 1045px;
+        }
+
+        
+    </style>
+
+<head>
+
+    <body> 
+        <div id="navegacao">
+			<div id="area">
+				<h1 id="logo"><span style="font-size: 20px;"  class="rosa">Todo</span><span style="font-size: 18px;"> mundo dançando!</span></h1>
+				<div id="menu">
+                    <a href="home.html"> Home</a>│
+					<a href="galeria.html">Galeria</a>│
+					<a href="proxc.html">Próximos Capítulos</a>│
+					<a href="s2.html">❤</a>│
+					<a href="play.html">Solta o Play</a>
+				</div>
+			</div>
+		</div>
+        <div id="area-principal">
+            <div id="postagem">
+
+                <video src="video/festajunina.mp4" controls autoplay loop style="width: 680px; height: 480px;" id="videoplay"> </video>
+                <br>
+               <!-- <img id="img" src="https://i.imgur.com/4rpfONL.jpg"> -->
+            </div>
+        </div>
+    </body>
+
+</html>
+<script>
+    var audiovideo = document.getElementById("videoplay");
+     audiovideo.volume = 0.3;
+</script>
+
+<audio style="width: 100%;" autoplay loop id="audiohome">
+    <source src="musica/dengo2.m4a">
+    Seu browser não tem suporte a tag audio
+    </audio>
+    
+    <script>
+         var audio = document.getElementById("audiohome");
+          audio.volume = 0.0;
+    </script>
