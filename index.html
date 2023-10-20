@@ -17,7 +17,11 @@
         body {
             font-size: 16px;
             font-family: "Trebuchet", Helvetica, sans-serif;
-            background: #ff4d4d; /* Rosa-claro */
+            /*background: #ff4d4d; /* Rosa-claro */
+            /*background-image: url(https://i.imgur.com/OU1CI2T.jpg);
+            filter: blur(10px);
+            background-repeat: no-repeat;
+            background-size: cover;*/
         }
 
         #navegacao {
@@ -39,6 +43,13 @@
         .rosa {
             color: #ff0000; /* #ffb3b3 rosa-menos-claro */
         }
+
+        /*.rosa:hover {
+            color: white;
+            transition: 2s;
+            box-shadow: 0 0 5px #fff, 0 0 25px #fff,
+            0 0 10px #fff, 0 0 10px #fff;
+        }*/
 
         #logo {
             float: left;
@@ -90,14 +101,14 @@
 
         /* Formatação do menu */
         a {
-            color: #ff1a1a;
+            /*color: #ff1a1a;*/
             padding: 5px 10px;
             text-decoration: none;
         }
 
         a:hover {
-            color: #fff;
-            background: #ff1a1a; /* #ffcccc */
+            /*border-radius: 0px red;*/
+            color: #ff4d4d;
         }
 
         a:link {
@@ -107,6 +118,97 @@
         a:active {
             color: black;
         }
+
+        .box {
+            opacity: 0.25;
+            flex-grow: 1;
+            transition: transform 2s linear;
+            margin: 200px 620px 200px 600px;
+            background-color: white;
+            text-align: center;
+            padding: 15px 30px;
+            border: 1px solid black;
+            border-radius: 30px;
+            box-shadow: 10px 10px 10px #000000;
+
+            /*transition: 1s ease-in;*/
+        }
+
+        @keyframes blink{
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;    
+            }
+        }
+        
+        .cor{
+            animation: blink 1s steps(1, end)infinite;
+        }
+
+        .box:hover{
+            /*animation: blink 1s steps(1, end)infinite;*/
+            transform: scale(1.3);
+            opacity: 1;
+            transition: 3s;
+
+            /*color: #e5e5e5;
+            background-color: #9b2a2a;
+            box-shadow: 0 0 5px #9b2a2a, 0 0 25px #9b2a2a,
+            0 0 10px #9b2a2a, 0 0 10px #9b2a2a;*/
+        }
+
+        .entrar {
+            color: #ff0000;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .produto-container{
+            display: flex;
+            /*width: 100%;
+            /*justify-content: space-around;*/
+        }
+
+        .pimg {
+            position: absolute;
+            height: 100%; width: 100%;
+        }
+
+        img{
+            filter: blur(5px);
+            background-size: cover;
+            background: no-repeat center center;
+            width: 100%; height: 100%;
+        }
+
+        /*.produto-container:hover {
+            transition: 3s;
+            opacity: 1;
+        }*/
+
+        @media screen and (max-width: 768px){
+            .produto-container{
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+
+        /*.bnt3{
+            transition: 1s ease-in;
+        }
+        .bnt3:hover{
+            color: #e5e5e5;
+            background-color: #9b2a2a;
+            box-shadow: 0 0 5px #9b2a2a, 0 0 25px #9b2a2a,
+            0 0 10px #9b2a2a, 0 0 10px #9b2a2a;
+        }*/
+
+
     </style>
 
     <title>Feliz Aniversário, Isis</title>
@@ -115,27 +217,14 @@
 
 </head>
 
-<body>
-    <div id="navegacao">
-        <div id="area">
-            <h1 id="logo"><span class="rosa">❤</span> <span style="color: black;"> Coração</span></h1>
-            <div id="menu">
-                <a href="home.html"> Home</a>│
-                <a href="galeria.html">Galeria</a>│
-                <a href="proxc.html">Próximos Capítulos</a>│
-                <a href="s2.html">❤</a>│
-                <a href="play.html">Solta o Play</a>
-            </div>
-        </div>
-    </div>
-
-    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-        <a href="home.html">
-            <button style="display: inline-block; border-radius: 50px; padding: 15px 30px;">
-                Clique para continuar
-            </button>
+<body class="produto-container">
+    <img src="https://i.imgur.com/OU1CI2T.jpg">
+        <a href="home.html" class="pimg">
+            <div class="box"><span style="font-size: 250px;" class="rosa">
+            ❤ <br></span><span class="entrar"><b>ENTRAR</b></span></div>
         </a>
-    </div>
+
 </body>
 
 </html>
+

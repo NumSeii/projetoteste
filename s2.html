@@ -1,178 +1,230 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-    <title> ❤ </title>
-    <style>
 
+<head>
+    <meta charset="utf-8">
+    <style>
+        /* Limpar formatação */
         * {
-	    margin: 0;
-	    padding: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            font-size: 24px;
         }
 
         body {
-	    font-size: 16px;
-	    font-family: "Treuchet", Helvetica, sans-serif;
-	    background: #ff4d4d; /*rosa-claro*/
+            font-size: 16px;
+            font-family: "Trebuchet", Helvetica, sans-serif;
+            /*background: #ff4d4d; /* Rosa-claro */
+            /*background-image: url(https://i.imgur.com/OU1CI2T.jpg);
+            filter: blur(10px);
+            background-repeat: no-repeat;
+            background-size: cover;*/
         }
 
-        #navegacao{
-        background: #fff; /*branco*/
-        border-bottom: 1px solid #ffb3b3; /*vermelho*/
-        height: 50px;
+        #navegacao {
+            background: #fff; /* Branco */
+            border-bottom: 1px solid #ffb3b3; /* Vermelho */
+            height: 50px;
         }
 
         #area {
-	    width: 720px;
-	    margin: 0 auto;
-        }
-
-        #logo {
-        font-size: 38px;
-	    float: left;
-        }
-
-        #menu {
-	    font-size: 15px;
-	    float: right;
-	    padding: 10px 0;
-        }
-
-        .rosa {
-	    color: #ff0000; /* #ffb3b3 rosa-menos-claro*/
+            width: 721px;
+            margin: 0 auto;
         }
 
         #area-principal {
-        /*background: #fff;*/
-	    width: 720px;
-	    margin: 10px auto 10px auto;
+            width: 721px;
+            margin: 10px auto 10px auto;
+        }
+
+        .rosa {
+            color: #ff0000; /* #ffb3b3 rosa-menos-claro */
+        }
+
+        /*.rosa:hover {
+            color: white;
+            transition: 2s;
+            box-shadow: 0 0 5px #fff, 0 0 25px #fff,
+            0 0 10px #fff, 0 0 10px #fff;
+        }*/
+
+        #logo {
+            float: left;
+        }
+
+        #menu {
+            font-size: 15px;
+            float: right;
+            padding: 10px 0;
         }
 
         #postagem {
-	    background: #fff;
-        height: 1000px;
-	    padding: 20px;
+            background: #fff;
+            padding: 10px;
         }
 
+        .data-postagem {
+            font-size: 14px;
+            border-bottom: 1px solid #f4f4f4;
+            display: block;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
 
         .img-postagem {
-	    width: 216px;
-	    height: 210px;
-	    float: left;
-	    margin: 5px 5px 10px 5px;
-        }
-
-        #galeria-foto{
-            /*background: #ff4d4d;*/
-            width: 200px;
-            padding: 5px;
+            width: 330px;
+            height: 330px;
             float: left;
-            margin: 5px;
+            margin: 0 10px 5px 0;
         }
 
+        .img-postagem2 {
+            width: 330px;
+            height: 330px;
+            float: right;
+            margin: 0 10px 5px 0;
+        }
+
+        .postado {
+            border-left: 5px solid #ff0000;
+            padding-left: 5px;
+            display: block;
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: #ff0000;
+        }
+
+        /* Formatação do menu */
         a {
-        color: #ff1a1a;
-        padding: 5px 10px;
-        text-decoration: none;
+            /*color: #ff1a1a;*/
+            padding: 5px 10px;
+            text-decoration: none;
         }
 
         a:hover {
-	    color: #fff;
-	    background: #ff1a1a/*#ffcccc*/;
+            /*border-radius: 0px red;*/
+            color: #ff4d4d;
         }
 
         a:link {
-	    color: #ffb3b3;
+            color: #ffb3b3;
         }
 
         a:active {
-	    color: black;
+            color: black;
         }
 
-        h1 {
-	    color: red;
+        .box {
+            opacity: 0.25;
+            flex-grow: 1;
+            transition: transform 2s linear;
+            margin: 200px 620px 200px 600px;
+            background-color: white;
+            text-align: center;
+            padding: 15px 30px;
+            border: 1px solid black;
+            border-radius: 30px;
+            box-shadow: 10px 10px 10px #000000;
+
+            /*transition: 1s ease-in;*/
         }
 
-        .heart {
-	    width: 200px;
-	    height: 200px;
-	    position: relative;
-	    transform: rotate(-135deg);
-	    margin: 100px auto;
-	    animation: pulse 1s infinite alternate;
+        @keyframes blink{
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;    
+            }
         }
-
-        .square {
-	    width: 200px;
-	    height: 200px;
-	    position: absolute;
-	    background-color: #e74c3c;
-        }
-
-        .circle {
-        width: 200px;
-        height: 200px;
         
-        border-radius: 200px;
-        position: absolute;
-        background-color: #e74c3c;
+        .cor{
+            animation: blink 1s steps(1, end)infinite;
         }
 
-        .top {
-	    top: 50%;
+        .box:hover{
+            /*animation: blink 1s steps(1, end)infinite;*/
+            transform: scale(1.3);
+            opacity: 1;
+            transition: 3s;
+
+            /*color: #e5e5e5;
+            background-color: #9b2a2a;
+            box-shadow: 0 0 5px #9b2a2a, 0 0 25px #9b2a2a,
+            0 0 10px #9b2a2a, 0 0 10px #9b2a2a;*/
         }
 
-        .left {
-	    left: 45%;
+        .entrar {
+            color: #ff0000;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        @keyframes pulse {
-	    0% {transform: scale(0.9) rotate(-135deg);}
-	    100% {transform: scale(1.1)
-        rotate(-135deg)}
+        .produto-container{
+            display: flex;
+            /*width: 100%;
+            /*justify-content: space-around;*/
         }
 
-        #ppd{
-            padding-top: 25px;
+        .pimg {
+            position: absolute;
+            height: 100%; width: 100%;
         }
+
+        img{
+            filter: blur(5px);
+            background-size: cover;
+            background: no-repeat center center;
+            width: 100%; height: 100%;
+        }
+
+        /*.produto-container:hover {
+            transition: 3s;
+            opacity: 1;
+        }*/
+
+        @media screen and (max-width: 768px){
+            .produto-container{
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+
+        /*.bnt3{
+            transition: 1s ease-in;
+        }
+        .bnt3:hover{
+            color: #e5e5e5;
+            background-color: #9b2a2a;
+            box-shadow: 0 0 5px #9b2a2a, 0 0 25px #9b2a2a,
+            0 0 10px #9b2a2a, 0 0 10px #9b2a2a;
+        }*/
+
 
     </style>
 
+    <title>Feliz Aniversário, Isis</title>
+
+    <!--[if IE]> <script src="js/html5shiv.js"></script> <![endif]-->
+
 </head>
 
-    <body>
-        <div id="navegacao">
-			<div id="area">
-				<h1 id="logo"><span class="rosa">❤</span> <span style="color: black;"> Coração</span></h1>
-				<div id="menu">
-                    <a href="home.html"> Home</a>│
-					<a href="galeria.html">Galeria</a>│
-					<a href="proxc.html">Próximos Capítulos</a>│
-					<a href="s2.html">❤</a>│
-					<a href="play.html">Solta o Play</a>
-				</div>
-			</div>
-		</div>
+<body class="produto-container">
+    <img src="https://i.imgur.com/OU1CI2T.jpg">
+        <a href="home.html" class="pimg">
+            <div class="box"><span style="font-size: 250px;" class="rosa">
+            ❤ <br></span><span class="entrar"><b>ENTRAR</b></span></div>
+        </a>
 
-        <div id="area-principal">
-            <div id="postagem">
-                <div id="ppd" class="heart">
-                    <div class="square"></div>
-                    <div class="circle top"></div>
-                    <div class="circle left"></div>
-                </div>
-                <div id="ppd" class="heart">
-                    <div class="square"></div>
-                    <div class="circle top"></div>
-                    <div class="circle left"></div>
-                </div>
-                <div id="ppd" class="heart">
-                    <div class="square"></div>
-                    <div class="circle top"></div>
-                    <div class="circle left"></div>
-                </div>
-
-    </body>
-
+</body>
 
 </html>
+
