@@ -2,173 +2,187 @@
 <html>
 <head>
     <title>🕹️</title>
+    <link rel="icon" href="https://i.imgur.com/O7WfEXn.jpg">
     <style>
+* {
+    margin: 0;
+    padding: 0;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            }
+    body {
+    font-size: 16px;
+    font-family: "Treuchet", Helvetica, sans-serif;
+    background: #ff4d4d; /*rosa-claro*/
+    }
+
+    #navegacao{
+    background: #fff; /*branco*/
+    border-bottom: 1px solid #ffb3b3; /*vermelho*/
+    height: 50px;
+    }
+
+    #area {
+    width: 720px;
+    margin: 0 auto;
+    }
+
+    #logo {
+    font-size: 38px;
+    float: left;
+    }
+
+    #menu {
+    font-size: 15px;
+    float: right;
+    padding: 10px 0;
+    }
+
+    .rosa {
+    color: #ff0000; /* #ffb3b3 rosa-menos-claro*/
+    }
+
+    #area-principal {
+    /*background: #fff;*/
+    width: 720px;
+    margin: 10px auto 10px auto;
+    }
+
+    #postagem {
+    box-shadow: 1px 10px 10px 10px #0006;
+    background: #fff;
+    height: 100%;
+    padding: 20px;
+    }
+
+
+    .img-postagem {
+    width: 216px;
+    height: 210px;
+    float: left;
+    margin: 5px 5px 10px 5px;
+    }
+
+    #galeria-foto{
+        /*background: #ff4d4d;*/
+        width: 200px;
+        padding: 5px;
+        float: left;
+        margin: 5px;
+    }
+
+    a {
+    color: #ff1a1a;
+    padding: 5px 10px;
+    text-decoration: none;
+    }
+
+    a:hover {
+    color: #fff;
+    background: #ff1a1a/*#ffcccc*/;
+    }
+
+    a:link {
+    color: #ffb3b3;
+    }
+
+    a:active {
+    color: black;
+    }
+
+    h1 {
+    color: red;
+    }
+
+    .heart {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform: rotate(-135deg);
+    margin: 100px auto;
+    transform: rotate(-135deg);
+    animation: pulse 1s infinite alternate;
+    }
+
+    .square {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #e74c3c;
+    }
+
+    .circle {
+    width: 200px;
+    height: 200px;
     
-            body {
-            font-size: 16px;
-            font-family: "Treuchet", Helvetica, sans-serif;
-            background: #ff4d4d; /*rosa-claro*/
-            }
+    border-radius: 200px;
+    position: absolute;
+    background-color: #e74c3c;
+    }
+
+    .top {
+    top: 50%;
+    }
+
+    .left {
+    left: 45%;
+    }
+
+    @keyframes pulse {
+    0% {transform: scale(0.9) rotate(-135deg);}
+    100% {transform: scale(1.1)
+    rotate(-135deg)}
+    }
+
+    #ppd{
+        padding-top: 25px;
+    }
+
+    body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
     
-            #navegacao{
-            background: #fff; /*branco*/
-            border-bottom: 1px solid #ffb3b3; /*vermelho*/
-            height: 50px;
-            }
+    h1 {
+        color: #333;
+    }
     
-            #area {
-            width: 720px;
-            margin: 0 auto;
-            }
+    input {
+        padding: 10px;
+        margin: 10px;
+    }
     
-            #logo {
-            font-size: 38px;
-            float: left;
-            }
+    button {
+        padding: 10px 20px;
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
     
-            #menu {
-            font-size: 15px;
-            float: right;
-            padding: 10px 0;
-            }
-    
-            .rosa {
-            color: #ff0000; /* #ffb3b3 rosa-menos-claro*/
-            }
-    
-            #area-principal {
-            /*background: #fff;*/
-            width: 720px;
-            margin: 10px auto 10px auto;
-            }
-    
-            #postagem {
-            box-shadow: 1px 10px 10px 10px #0006;
-            background: #fff;
-            height: 900px;
-            padding: 20px;
-            }
-    
-    
-            .img-postagem {
-            width: 216px;
-            height: 210px;
-            float: left;
-            margin: 5px 5px 10px 5px;
-            }
-    
-            #galeria-foto{
-                /*background: #ff4d4d;*/
-                width: 200px;
-                padding: 5px;
-                float: left;
-                margin: 5px;
-            }
-    
-            a {
-            color: #ff1a1a;
-            padding: 5px 10px;
-            text-decoration: none;
-            }
-    
-            a:hover {
-            color: #fff;
-            background: #ff1a1a/*#ffcccc*/;
-            }
-    
-            a:link {
-            color: #ffb3b3;
-            }
-    
-            a:active {
-            color: black;
-            }
-    
-            h1 {
-            color: red;
-            }
-    
-            .heart {
-            width: 200px;
-            height: 200px;
-            position: relative;
-            transform: rotate(-135deg);
-            margin: 100px auto;
-            transform: rotate(-135deg);
-            animation: pulse 1s infinite alternate;
-            }
-    
-            .square {
-            width: 200px;
-            height: 200px;
-            position: absolute;
-            background-color: #e74c3c;
-            }
-    
-            .circle {
-            width: 200px;
-            height: 200px;
-            
-            border-radius: 200px;
-            position: absolute;
-            background-color: #e74c3c;
-            }
-    
-            .top {
-            top: 50%;
-            }
-    
-            .left {
-            left: 45%;
-            }
-    
-            @keyframes pulse {
-            0% {transform: scale(0.9) rotate(-135deg);}
-            100% {transform: scale(1.1)
-            rotate(-135deg)}
-            }
-    
-            #ppd{
-                padding-top: 25px;
-            }
-    
-            body {
-                text-align: center;
-                font-family: Arial, sans-serif;
-            }
-            
-            h1 {
-                color: #333;
-            }
-            
-            input {
-                padding: 10px;
-                margin: 10px;
-            }
-            
-            button {
-                padding: 10px 20px;
-                background-color: #ff4d4d;
-                color: white;
-                border: none;
-                cursor: pointer;
-            }
-            
-            button:hover {
-                background-color: #a51010;
-            }
-    
+    button:hover {
+        background-color: #a51010;
+    }
+
+    ul{
+        padding-left: 0px;
+        color: #000;
+    }
+    li{
+        font-size: 22px;
+        color: #000;
+        text-align: justify;
+    }
+
+    #rounded{
+        rounded
+    }
+</style>
     </style>
 </head>
 <body>
     <div id="navegacao">
         <div id="area">
-            <h1 id="logo"><span class="rosa">❤</span> <span style="color: black;"> Acerta aí</span></h1>
+            <h1 id="logo"><span class="rosa">❤</span> <span style="color: #000;"> Acerta aí</span></h1>
             <div id="menu">
                 <a href="home.html"> Home</a>│
                 <a href="galeria.html">Galeria</a>│
@@ -188,6 +202,15 @@
             <input style="font-size: 1.5em; font-weight: bold;" type="text" id="guess" placeholder="Digite sua adivinhação">
             <button id="check" style="font-size: 1.3em;">Verificar</button>
             <p id="message"></p>
+            <!-- Adicione a div para mostrar palavras erradas -->
+            <div id="palavras-incorretas" style="background: #ebe9ea; border: 2px solid #000; border-radius: 5px; margin: 120px 100px 10px 100px; padding: 20px 0px 20px 0px;">
+                <h2 style="font-size: 28px; color: #000; font-family: monospace;">Palavras Incorretas:<br></h2><br>
+                <ul id="lista-palavras-incorretas" style="font-family: sans-serif; margin-left: 120px;" >
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const secretWords = [
@@ -218,14 +241,15 @@
                 { word: "Otavio", response: "Eu não sou a palavra secreta!" },
                 { word: "Atletico", response: "Podia ser a palavra secreta! Mas seria fácil demais.." },
                 { word: "Galo", response: "Podia ser a palavra secreta! Mas seria fácil demais.." }
-                        ];
+            ];
 
             let attempts = 0;
-
             const guessInput = document.getElementById("guess");
             const checkButton = document.getElementById("check");
             const attemptsSpan = document.getElementById("attempts");
             const message = document.getElementById("message");
+            // Adicione referências aos novos elementos
+            const palavrasIncorretasList = document.getElementById("lista-palavras-incorretas");
 
             checkButton.addEventListener("click", function() {
                 const guess = guessInput.value.trim().toLowerCase();
@@ -244,6 +268,10 @@
                     attemptsSpan.textContent = attempts;
                     message.textContent = "Tente novamente.";
                     message.style.color = "red";
+                    // Adicione a palavra incorreta à lista
+                    const li = document.createElement("li");
+                    li.textContent = guess + " ❌";
+                    palavrasIncorretasList.appendChild(li);
                 }
 
                 guessInput.value = '';
