@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="topo">
 <head>
     <title>🕹️</title>
     <link rel="icon" href="https://i.imgur.com/O7WfEXn.jpg">
@@ -173,9 +173,10 @@
         text-align: justify;
     }
 
-    #rounded{
-        rounded
+    html{
+        scroll-behavior: smooth;
     }
+
 </style>
     </style>
 </head>
@@ -208,14 +209,17 @@
                 <ul id="lista-palavras-incorretas" style="font-family: sans-serif; margin-left: 120px;" >
                 </ul>
             </div>
+            <div style="padding: 30px 0px 10px 0px; font-size: 18px; font-weight: bold;">
+                <a href="#topo">Ir para o topo</a>
+            </div>
         </div>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const secretWords = [
-                { word: "Choque térmico", response: "Parabéns! Essa é a palavra secreta!"},
-                { word: "Choque termico", response: "Parabéns! Essa é a palavra secreta!"},
+                { word: "Choque térmico", response: "Nao é mais a palavra secreta!"},
+                { word: "Choque termico", response: "Nao é mais a palavra secreta!"},
                 { word: "Senhorita Escritora", response: "A Isis? Ela tem toda a inteligência e beleza, e os miolos no lugar, mas não é a palavra secreta."},
                 { word: "Dire Straits", response: "Êêêê banda boa! Mas não é a palavra secreta."},
                 { word: "A Melhor", response: "Essa seria a palavra secreta, mas eu escolhi outra!" },
@@ -254,15 +258,20 @@
             checkButton.addEventListener("click", function() {
                 const guess = guessInput.value.trim().toLowerCase();
 
-                if (guess === "choque térmico" || guess === "choque termico") {
+                if (guess === "chamada de video" || guess === "chamada de vídeo") {
                     window.location.href = "acerto.html";
                     return;
                 }
 
                 const secretWord = secretWords.find(word => word.word.toLowerCase() === guess);
                 if (secretWord) {
+                    attempts++;
+                    attemptsSpan.textContent = attempts;
                     message.textContent = secretWord.response;
                     message.style.color = "green";
+                    const li = document.createElement("li");
+                    li.textContent = guess + " ❌";
+                    palavrasIncorretasList.appendChild(li);
                 } else {
                     attempts++;
                     attemptsSpan.textContent = attempts;
